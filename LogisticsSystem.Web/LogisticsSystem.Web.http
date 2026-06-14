@@ -1,0 +1,6 @@
+@LogisticsSystem.Web_HostAddress = http://localhost:5272
+
+GET {{LogisticsSystem.Web_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
