@@ -7,16 +7,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.10" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.10">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Scalar.AspNetCore" Version="2.16.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.6" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Infrastructure\LogisticsSystem.Persistence\LogisticsSystem.Persistence.csproj" />
     <ProjectReference Include="..\Infrastructure\LogisticsSystem.Presentation\LogisticsSystem.Presentation.csproj" />
+    <ProjectReference Include="..\Core\LogisticsSystem.Service\LogisticsSystem.Service.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -7,8 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.10" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\LogisticsSystem.Abstraction\LogisticsSystem.Abstraction.csproj" />
     <ProjectReference Include="..\LogisticsSystem.Domain\LogisticsSystem.Domain.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\LogisticsSystem.Persistence\LogisticsSystem.Persistence.csproj" />
   </ItemGroup>
 
 </Project>
