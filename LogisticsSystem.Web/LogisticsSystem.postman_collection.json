@@ -1,0 +1,669 @@
+{
+  "info": {
+    "_postman_id": "f387f824-46a1-4942-98aa-aad23c66ad63",
+    "name": "LogisticsSystem",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49513156",
+    "_collection_link": "https://go.postman.co/collection/49513156-f387f824-46a1-4942-98aa-aad23c66ad63?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"admin@logistics.com\",\r\n  \"password\": \"Admin@123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7131/api/auth/login",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7131",
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"displayName\": \"Adham Mohamed\",\r\n  \"userName\": \"adham26\",\r\n  \"email\": \"adham@test.com\",\r\n  \"password\": \"Password@123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7131/api/auth/register",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7131",
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Refresh Token",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"refreshToken\":\"RfQcSKtDsK1ATUF9pnXj8FZPdf3QTfczy6zraRQh33Fk6sYU3BxuPap0UlzldbF7aX6RPNHOtQHL4zDOaRqiqw==\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7131/api/auth/refresh-token",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7131",
+              "path": [
+                "api",
+                "auth",
+                "refresh-token"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"refreshToken\": \"3KJ7SM8rxm10iQTQPr9Li74zMQ6HaHgv31N4oEXumir/TDMFsiDF0iiYWcEeAh/oqQ7Q5qhD3iU1GH6XluG9LA==\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7131/api/auth/logout",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7131",
+              "path": [
+                "api",
+                "auth",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Notifications",
+      "item": [
+        {
+          "name": "Get Notifications",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7131/api/Notification",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7131",
+              "path": [
+                "api",
+                "Notification"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Read Notification",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7131/api/Notification/:id/read",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7131",
+              "path": [
+                "api",
+                "Notification",
+                ":id",
+                "read"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Reports",
+      "item": [
+        {
+          "name": "Daily Shipments Report",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7131/api/Reports/daily-shipments",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7131",
+              "path": [
+                "api",
+                "Reports",
+                "daily-shipments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Warehouse Capacity",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7131/api/Reports/warehouse-capacity",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7131",
+              "path": [
+                "api",
+                "Reports",
+                "warehouse-capacity"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Admin",
+      "item": [
+        {
+          "name": "Get Shipments",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7131/api/Admin/shipments",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7131",
+              "path": [
+                "api",
+                "Admin",
+                "shipments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Assign Warehouse",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"warehouseId\": 0\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7131/api/Admin/shipments/:id/assign-warehouse",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7131",
+              "path": [
+                "api",
+                "Admin",
+                "shipments",
+                ":id",
+                "assign-warehouse"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Assign Agent",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"agentId\": 0\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7131/api/Admin/shipments/:id/assign-agent",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7131",
+              "path": [
+                "api",
+                "Admin",
+                "shipments",
+                ":id",
+                "assign-agent"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Shipments",
+      "item": [
+        {
+          "name": "Create Shipment",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"senderName\": \"string\",\r\n  \"senderPhone\": \"string\",\r\n  \"receiverName\": \"string\",\r\n  \"receiverPhone\": \"string\",\r\n  \"packType\": \"string\",\r\n  \"weight\": 0,\r\n  \"deliveryAddress\": \"string\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7131/api/Shipments",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7131",
+              "path": [
+                "api",
+                "Shipments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "My Shipments",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7131/api/Shipments/my-shipments",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7131",
+              "path": [
+                "api",
+                "Shipments",
+                "my-shipments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Shipment By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7131/api/Shipments/?id",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7131",
+              "path": [
+                "api",
+                "Shipments",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": null,
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Shipment Track By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7131/api/Shipments/track/?trackingId",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7131",
+              "path": [
+                "api",
+                "Shipments",
+                "track",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "trackingId",
+                  "value": null,
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Assigned Shipments",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Update Shipment Status",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7131/api/Shipments/:id/status",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7131",
+              "path": [
+                "api",
+                "Shipments",
+                ":id",
+                "status"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Proof Shipment By ImageUrl",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"proofImageUrl\": \"string\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7131/api/Shipments/:id/proof",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7131",
+              "path": [
+                "api",
+                "Shipments",
+                ":id",
+                "proof"
+              ],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Warehouses",
+      "item": [
+        {
+          "name": "Get Warehouses",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7131/api/Warehouses",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7131",
+              "path": [
+                "api",
+                "Warehouses"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Warehouse",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 0,\r\n  \"name\": \"string\",\r\n  \"capacity\": 0,\r\n  \"currentShipmentsCount\": 0\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7131/api/Warehouses",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7131",
+              "path": [
+                "api",
+                "Warehouses"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Warehouse By Id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7131/api/Warehouses/?id",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7131",
+              "path": [
+                "api",
+                "Warehouses",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": null,
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Warehouse",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 0,\r\n  \"name\": \"string\",\r\n  \"capacity\": 0,\r\n  \"currentShipmentsCount\": 0\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://localhost:7131/api/Warehouses/?id",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7131",
+              "path": [
+                "api",
+                "Warehouses",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Waregouse",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://localhost:7131/api/Warehouses/?id",
+              "protocol": "https",
+              "host": [
+                "localhost"
+              ],
+              "port": "7131",
+              "path": [
+                "api",
+                "Warehouses",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
