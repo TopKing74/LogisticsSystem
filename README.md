@@ -51,5 +51,5 @@ The solution is strictly structured using the **Onion Architecture** pattern to 
 
 1. **Clone the repository:**
    ```bash
-   git clone <YOUR_GITHUB_REPOSITORY_LINK>
+   git clone <https://github.com/TopKing74/LogisticsSystem>
    cd LogisticsSystem
